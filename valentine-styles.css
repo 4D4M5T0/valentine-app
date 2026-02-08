@@ -26,6 +26,8 @@
   border: 4px solid #ff69b4;
   box-shadow: 0 8px 24px rgba(255, 105, 180, 0.3);
   transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
 .gif-image:hover {
@@ -64,6 +66,320 @@
 
 .text-shadow-sm {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  display: inline-block;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: confettiFall 3s linear infinite;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.8s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-heart {
+  display: inline-block;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+/* Mobile Responsive Styles */
+
+/* Tablets and smaller (iPad, iPad Mini) */
+@media (max-width: 991px) {
+  .card-main {
+    max-width: 90%;
+    padding: 2.5rem !important;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem !important;
+  }
+  
+  .display-1 {
+    font-size: 5rem !important;
+  }
+  
+  .gif-image {
+    max-width: 350px !important;
+    max-height: 250px !important;
+  }
+}
+
+/* Mobile devices (iPhone 15 Pro, iPhone 14, etc.) */
+@media (max-width: 768px) {
+  .card-main {
+    padding: 2rem !important;
+    border-radius: 1.5rem !important;
+    max-width: 95%;
+  }
+  
+  .display-4 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .display-1 {
+    font-size: 4rem !important;
+  }
+  
+  .display-2 {
+    font-size: 3rem !important;
+  }
+  
+  .display-6 {
+    font-size: 1.5rem !important;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+  
+  .btn-yes {
+    font-size: 1.5rem !important;
+    padding: 1rem 2rem !important;
+  }
+  
+  .btn-no {
+    font-size: 1.2rem !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+  
+  .gif-image {
+    max-width: 280px !important;
+    max-height: 200px !important;
+    border-width: 3px;
+  }
+  
+  /* Adjust buttons container */
+  .d-flex.gap-4 {
+    gap: 1rem !important;
+  }
+  
+  /* Mobile heart emojis */
+  .fs-1 {
+    font-size: 2rem !important;
+  }
+  
+  .fs-2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Small phones (iPhone SE, older models) */
+@media (max-width: 576px) {
+  .card-main {
+    padding: 1.5rem !important;
+    border-radius: 1rem !important;
+  }
+  
+  .display-4 {
+    font-size: 1.75rem !important;
+  }
+  
+  .display-1 {
+    font-size: 3.5rem !important;
+  }
+  
+  .display-2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .display-6 {
+    font-size: 1.25rem !important;
+  }
+  
+  .lead {
+    font-size: 0.95rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .btn-yes {
+    font-size: 1.25rem !important;
+    padding: 0.875rem 1.75rem !important;
+  }
+  
+  .btn-no {
+    font-size: 1rem !important;
+    padding: 0.625rem 1.25rem !important;
+  }
+  
+  .gif-image {
+    max-width: 240px !important;
+    max-height: 180px !important;
+    border-width: 2px;
+  }
+  
+  .d-flex.gap-4 {
+    gap: 0.75rem !important;
+    flex-direction: column !important;
+  }
+  
+  .fs-1 {
+    font-size: 1.75rem !important;
+  }
+  
+  .fs-2 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Smaller confetti on mobile */
+  .confetti {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* iPhone 15 Pro specific (393 x 852) */
+@media (max-width: 430px) and (min-height: 800px) {
+  .card-main {
+    max-width: 92%;
+  }
+  
+  .display-4 {
+    font-size: 1.6rem !important;
+  }
+  
+  .gif-image {
+    max-width: 260px !important;
+    max-height: 195px !important;
+  }
+}
+
+/* Landscape mode on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .card-main {
+    padding: 1rem !important;
+    max-width: 85%;
+  }
+  
+  .display-1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .display-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .lead {
+    font-size: 0.875rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .gif-image {
+    max-width: 200px !important;
+    max-height: 150px !important;
+  }
+  
+  .btn-yes, .btn-no {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Touch-friendly buttons on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .btn-yes:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-no:active {
+    transform: scale(0.95);
+  }
+  
+  .card-main:hover {
+    transform: scale(1);
+  }
 }
 
 /* Animations */
