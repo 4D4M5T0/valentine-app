@@ -91,9 +91,6 @@ export default function ValentineApp() {
             <span className="animate-bounce" style={{animationDelay: '0.4s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.5s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.6s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.7s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.8s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.9s'}}>❤️</span>
           </div>
         </div>
       </div>
@@ -157,9 +154,6 @@ export default function ValentineApp() {
             <span className="animate-bounce" style={{animationDelay: '0.4s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.5s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.6s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.7s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.8s'}}>❤️</span>
-            <span className="animate-bounce" style={{animationDelay: '0.9s'}}>❤️</span>
           </div>
         </div>
       </div>
