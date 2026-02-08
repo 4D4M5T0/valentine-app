@@ -83,8 +83,8 @@ export default function ValentineApp() {
           <p className="display-6 text-white mb-5 text-shadow-sm">
             Nie brałem innej opcji pod uwagę. 🤪🤪🤪
           </p>
-          <div className="d-flex gap-4 justify-content-center fs-1 animate-float">
-            <span className="animate-bounce">❤️</span>
+          <div className="mt-5 d-flex gap-3 justify-content-center fs-2">
+                        <span className="animate-bounce">❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.1s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.2s'}}>❤️</span>
             <span className="animate-bounce" style={{animationDelay: '0.3s'}}>❤️</span>
